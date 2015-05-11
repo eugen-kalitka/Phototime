@@ -1,0 +1,294 @@
+@import url(../css/normalize.css);
+
+@font-face {
+  font-family: 'Gotham-Rounded-Bold';
+  src: url('../fonts/Gotham-Rounded-Bold_21016.eot');
+  src: local('☺'), url('../fonts/Gotham-Rounded-Bold_21016.woff') format('woff'),
+  url('../fonts/Gotham-Rounded-Bold_21016.ttf') format('truetype'),
+  url('../fonts/Gotham-Rounded-Bold_21016.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Rounded-Medium';
+  src: url('../fonts/Gotham-Rounded-Medium_21022.eot');
+  src: local('☺'), url('../fonts/Gotham-Rounded-Medium_21022.woff') format('woff'),
+  url('../fonts/Gotham-Rounded-Medium_21022.ttf') format('truetype'),
+  url('../fonts/Gotham-Rounded-Medium_21022.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Rounded-Light';
+  src: url('../fonts/Gotham-Rounded-Light_21020.eot');
+  src: local('☺'), url('../fonts/Gotham-Rounded-Light_21020.woff') format('woff'),
+  url('../fonts/Gotham-Rounded-Light_21020.ttf') format('truetype'),
+  url('../fonts/Gotham-Rounded-Light_21020.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* variables */
+
+$background-color-secondary: #f5f6f7;
+$primary-text-color: #ffffff;
+$button-and-titles-color: #16a085;
+$paragraph-text-color: #373737;
+$font-medium: 'Gotham-Rounded-Medium', sans-serif;
+$font-light: 'Gotham-Rounded-Light', sans-serif;
+
+* {
+  font-family: 'Gotham-Rounded-Bold', sans-serif;
+}
+
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- button-styles --- */
+
+button {
+  background: $button-and-titles-color;
+  border: none;
+  border-radius: 2px;
+  font-size: 0.75em;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 220px;
+  padding: 17px 30px;
+  transition: 300ms;
+  &:hover {
+    /*background: #fff;
+    color: #16a085;*/
+    background: darken($button-and-titles-color, 10%);
+  }
+}
+
+
+
+/* --- main styles --- */
+
+/* --- first section --- */
+
+.s-first {
+  background: url(../img/section-1.jpg) no-repeat;
+  background-size: cover;
+  color: $primary-text-color;
+  letter-spacing: 0.15em;
+  width: 100%;
+  text-align: center;
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    nav {
+      padding: 35px 0 0 35px;
+      overflow: hidden;
+      max-width: 65%;
+      margin: auto;
+      a {
+        margin: 30px 30px 0;
+        padding: 5px 0;
+        font-size: 1em;
+        text-transform: uppercase;
+        transition: 300ms;
+      }
+      .pull-left {
+        float: left;
+        &:hover {
+          margin-top: 22px;
+        }
+      }
+      .pull-right {
+        float: right;
+        margin-right: 40px;
+        &:hover {
+          margin-top: 22px;
+        }
+      }
+      .logo {
+        width: 60px;
+        height: 63px;
+        background: url(../img/logo.png) no-repeat;
+        position: absolute;
+        left: 50%;
+        margin-left: -30px;
+        margin-top: 0;
+      }
+    }
+  }
+  h1, p {
+    text-align: center;
+    text-indent: 25px;
+  }
+  h1 {
+    margin: 0 auto 8px; //246px
+    padding-top: 335px;
+    font-size: 2.25em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+  p {
+    margin: 0 0 25px;
+    font-family: $font-medium;
+    font-weight: normal;
+    letter-spacing: 0.17em;
+  }
+
+  .icons-block {
+    margin: 0 auto;
+    padding-bottom: 20px;
+    width: 134px;
+    overflow: hidden;
+    .icons {
+      width: 28px;
+      margin: 0 5px;
+      height: 26px;
+      float: left;
+    }
+    .icon-twitter {
+      background: url(../img/icon-twitter.png) no-repeat;
+      margin-left: 20px;
+    }
+    .icon-flickr {
+      background: url(../img/icon-flickr.png) no-repeat;
+    }
+    .icon-dribbble {
+      background: url(../img/icon-dribbble.png) no-repeat;
+    }
+  }
+}
+
+/* --- second section --- */
+
+.s-second {
+  position: relative;
+  .content{
+    background: $background-color-secondary; //url(../img/hand.png) no-repeat
+    background-size: cover;
+    letter-spacing: 0.15em;
+    overflow: hidden;
+    width: 100%;
+    .text-column {
+      float: left;
+      width: 36%; //40.7643312%
+      margin-top: 110px;
+      padding-left: 10%; //9.2356688%
+      h2 {
+        color: $button-and-titles-color;
+        font-size: 1.125em;
+        font-weight: normal;
+        margin-top: 0;
+        margin-bottom: 35px;
+        text-transform: uppercase;
+      }
+      p {
+        color: $paragraph-text-color;
+        line-height: 2 !important;
+        font: .75em $font-light;
+        text-align: left;
+        margin: 0 0 45px 0;
+      }
+      button {
+        color: $primary-text-color;
+        margin-bottom: 90px;
+        padding: 19px 45px 17px;
+      }
+    }
+    .hand {
+      background: url(../img/hand%20copy.png) no-repeat;
+      background-size: cover;
+      width: 62.7388535%;
+      height: 100%; //494px
+      position: absolute;
+      right: -12px;
+      top: 0;
+    }
+  }
+
+}
+
+/* --- third section --- */
+
+.s-third {
+  .content {
+    letter-spacing: 0.15em;
+    height: 558px;
+    overflow: hidden;
+    .mob-img {
+      background: url(../img/phone.png) no-repeat;
+      background-size: cover;
+      float: left;
+      width: 45.8598726%;
+      height: 100%;
+    }
+    .text-column {
+      float: right;
+      width: 35.6687898%;
+      margin-top: 142px;
+      padding-right: 4%;// 4.1401274%
+    }
+    h2 {
+      color: $button-and-titles-color;
+      font-size: 1.125em;
+      font-weight: normal;
+      margin-top: 0;
+      margin-bottom: 32px;
+      text-transform: uppercase;
+    }
+    p {
+      color: $paragraph-text-color;
+      line-height: 2 !important;
+      font: .75em $font-light;
+      text-align: left;
+      margin: 0 0 45px 0;
+      padding-left: 5px;
+    }
+  }
+}
+
+/* --- fourth section --- */
+
+.s-fourth {
+  .content {
+    background: $background-color-secondary;
+    letter-spacing: 0.15em;
+    font-weight: normal;
+    overflow: hidden;
+    .text-column {
+      color: $paragraph-text-color;
+      float: left;
+      margin-top: 157px;
+      margin-left: 10%;
+      width: 15%;
+      .logo-colorized {
+        background: url(../img/logo-2.png) no-repeat;
+        width: 74px;
+        height: 70px;
+        margin: 0 auto 20px;
+      }
+      h3 {
+        font-size: 1em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+      p {
+        font: .625em $font-medium;
+        letter-spacing: 0.1em;
+        text-align: center;
+        padding: 0 15px;
+      }
+    }
+
+  }
+}
+
+
+
+
+

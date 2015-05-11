@@ -1,0 +1,216 @@
+@charset "UTF-8";
+@import url(../css/normalize.css);
+@font-face {
+  font-family: 'Gotham-Rounded-Bold';
+  src: url("../fonts/Gotham-Rounded-Bold_21016.eot");
+  src: local("☺"), url("../fonts/Gotham-Rounded-Bold_21016.woff") format("woff"), url("../fonts/Gotham-Rounded-Bold_21016.ttf") format("truetype"), url("../fonts/Gotham-Rounded-Bold_21016.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Gotham-Rounded-Medium';
+  src: url("../fonts/Gotham-Rounded-Medium_21022.eot");
+  src: local("☺"), url("../fonts/Gotham-Rounded-Medium_21022.woff") format("woff"), url("../fonts/Gotham-Rounded-Medium_21022.ttf") format("truetype"), url("../fonts/Gotham-Rounded-Medium_21022.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Gotham-Rounded-Light';
+  src: url("../fonts/Gotham-Rounded-Light_21020.eot");
+  src: local("☺"), url("../fonts/Gotham-Rounded-Light_21020.woff") format("woff"), url("../fonts/Gotham-Rounded-Light_21020.ttf") format("truetype"), url("../fonts/Gotham-Rounded-Light_21020.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* variables */
+* {
+  font-family: 'Gotham-Rounded-Bold', sans-serif; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+/* --- button-styles --- */
+button {
+  background: #16a085;
+  border: none;
+  border-radius: 2px;
+  font-size: 0.75em;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 220px;
+  padding: 17px 30px;
+  transition: 300ms; }
+  button:hover {
+    /*background: #fff;
+    color: #16a085;*/
+    background: #107360; }
+
+/* --- main styles --- */
+/* --- first section --- */
+.s-first {
+  background: url(../img/section-1.jpg) no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  letter-spacing: 0.15em;
+  width: 100%;
+  text-align: center; }
+  .s-first header {
+    position: fixed;
+    top: 0;
+    width: 100%; }
+    .s-first header nav {
+      padding: 35px 0 0 35px;
+      overflow: hidden;
+      max-width: 65%;
+      margin: auto; }
+      .s-first header nav a {
+        margin: 30px 30px 0;
+        padding: 5px 0;
+        font-size: 1em;
+        text-transform: uppercase;
+        transition: 300ms; }
+      .s-first header nav .pull-left {
+        float: left; }
+        .s-first header nav .pull-left:hover {
+          margin-top: 22px; }
+      .s-first header nav .pull-right {
+        float: right;
+        margin-right: 40px; }
+        .s-first header nav .pull-right:hover {
+          margin-top: 22px; }
+      .s-first header nav .logo {
+        width: 60px;
+        height: 63px;
+        background: url(../img/logo.png) no-repeat;
+        position: absolute;
+        left: 50%;
+        margin-left: -30px;
+        margin-top: 0; }
+  .s-first h1, .s-first p {
+    text-align: center;
+    text-indent: 25px; }
+  .s-first h1 {
+    margin: 0 auto 8px;
+    padding-top: 335px;
+    font-size: 2.25em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em; }
+  .s-first p {
+    margin: 0 0 25px;
+    font-family: "Gotham-Rounded-Medium", sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.17em; }
+  .s-first .icons-block {
+    margin: 0 auto;
+    padding-bottom: 20px;
+    width: 134px;
+    overflow: hidden; }
+    .s-first .icons-block .icons {
+      width: 28px;
+      margin: 0 5px;
+      height: 26px;
+      float: left; }
+    .s-first .icons-block .icon-twitter {
+      background: url(../img/icon-twitter.png) no-repeat;
+      margin-left: 20px; }
+    .s-first .icons-block .icon-flickr {
+      background: url(../img/icon-flickr.png) no-repeat; }
+    .s-first .icons-block .icon-dribbble {
+      background: url(../img/icon-dribbble.png) no-repeat; }
+
+/* --- second section --- */
+.s-second {
+  position: relative; }
+  .s-second .content {
+    background: #f5f6f7;
+    background-size: cover;
+    letter-spacing: 0.15em;
+    overflow: hidden;
+    width: 100%; }
+    .s-second .content .text-column {
+      float: left;
+      width: 36%;
+      margin-top: 110px;
+      padding-left: 10%; }
+      .s-second .content .text-column h2 {
+        color: #16a085;
+        font-size: 1.125em;
+        font-weight: normal;
+        margin-top: 0;
+        margin-bottom: 35px;
+        text-transform: uppercase; }
+      .s-second .content .text-column p {
+        color: #373737;
+        line-height: 2 !important;
+        font: 0.75em "Gotham-Rounded-Light", sans-serif;
+        text-align: left;
+        margin: 0 0 45px 0; }
+      .s-second .content .text-column button {
+        color: #ffffff;
+        margin-bottom: 90px;
+        padding: 19px 45px 17px; }
+    .s-second .content .hand {
+      background: url(../img/hand%20copy.png) no-repeat;
+      background-size: cover;
+      width: 62.7388535%;
+      height: 100%;
+      position: absolute;
+      right: -12px;
+      top: 0; }
+
+/* --- third section --- */
+.s-third .content {
+  letter-spacing: 0.15em;
+  height: 558px;
+  overflow: hidden; }
+  .s-third .content .mob-img {
+    background: url(../img/phone.png) no-repeat;
+    background-size: cover;
+    float: left;
+    width: 45.8598726%;
+    height: 100%; }
+  .s-third .content .text-column {
+    float: right;
+    width: 35.6687898%;
+    margin-top: 142px;
+    padding-right: 4%; }
+  .s-third .content h2 {
+    color: #16a085;
+    font-size: 1.125em;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 32px;
+    text-transform: uppercase; }
+  .s-third .content p {
+    color: #373737;
+    line-height: 2 !important;
+    font: 0.75em "Gotham-Rounded-Light", sans-serif;
+    text-align: left;
+    margin: 0 0 45px 0;
+    padding-left: 5px; }
+
+/* --- fourth section --- */
+.s-fourth .content {
+  background: #f5f6f7;
+  letter-spacing: 0.15em;
+  font-weight: normal;
+  overflow: hidden; }
+  .s-fourth .content .text-column {
+    color: #373737;
+    float: left;
+    margin-top: 157px;
+    margin-left: 10%;
+    width: 15%; }
+    .s-fourth .content .text-column .logo-colorized {
+      background: url(../img/logo-2.png) no-repeat;
+      width: 74px;
+      height: 70px;
+      margin: 0 auto 20px; }
+    .s-fourth .content .text-column h3 {
+      font-size: 1em;
+      text-transform: uppercase;
+      margin-bottom: 20px; }
+    .s-fourth .content .text-column p {
+      font: 0.625em "Gotham-Rounded-Medium", sans-serif;
+      letter-spacing: 0.1em;
+      text-align: center;
+      padding: 0 15px; }
+
+/*# sourceMappingURL=main.css.map */

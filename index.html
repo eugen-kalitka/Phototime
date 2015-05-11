@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Phototime</title>
+    <link href="scss/main.css" rel="stylesheet" />
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+</head>
+<body>
+<section class="s-first">
+
+    <header>
+        <nav>
+            <a href="#" class="pull-left">Home</a>
+            <a href="#" class="pull-left">Photoapp</a>
+            <a href="#" class="logo"></a>
+            <a href="#" class="pull-right">Download</a>
+            <a href="#" class="pull-right">Design</a>
+
+        </nav>
+    </header>
+
+    <div class="container-first">
+        <h1>your life , a photo</h1>
+
+        <p class="tagline">print your life in a simple photo</p>
+
+        <button>get started</button>
+
+        <div class="icons-block">
+            <a href="#" class="icons icon-twitter"></a>
+            <a href="#" class="icons icon-flickr"></a>
+            <a href="#" class="icons icon-dribbble"></a>
+        </div>
+    </div>
+</section>
+
+<section class="s-second">
+    <div class="content">
+
+        <div class="text-column">
+            <h2>Rappresent your life with a
+                simple photo</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut <span>enim ad minim</span> veniam, quis
+                nostrud exercitation ullamco laboris nisi
+                ut aliquip ex ea commodo consequat.</p>
+
+            <button>get started</button>
+        </div>
+
+        <div class="hand"></div>
+    </div>
+</section>
+
+<section class="s-third">
+    <div class="content">
+        <div class="mob-img"></div>
+
+        <div class="text-column">
+            <h2>Design</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut <span>enim ad minim</span> veniam, quis
+                nostrud exercitation ullamco laboris nisi
+                ut aliquip ex ea commodo consequat.</p>
+
+            <button>Learn More</button>
+        </div>
+    </div>
+</section>
+
+<section class="s-fourth">
+    <div class="content">
+
+        <div class="text-column">
+
+            <div class="logo-colorized"></div>
+
+            <h3>our community</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+
+        </div>
+
+        <ul class="bxslider">
+            <li><img src="pic/slide-1.jpg" /></li>
+            <li><img src="pic/slide-2.jpg" /></li>
+            <li><img src="pic/slide-3.jpg" /></li>
+            <li><img src="pic/slide-4.jpg" /></li>
+        </ul>
+    </div>
+</section>
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.bxslider').bxSlider({
+            minSlides: 2,
+            maxSlides: 2,
+            slideWidth: 370,
+            slideMargin: 25
+        });
+    });
+</script>
+</body>
+</html>

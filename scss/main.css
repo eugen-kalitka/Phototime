@@ -43,39 +43,42 @@ button {
     background: #107360; }
 
 /* --- main styles --- */
-/* --- first section --- */
-.s-first {
+/* --- home section --- */
+.home {
   background: url(../img/section-1.jpg) no-repeat;
   background-size: cover;
   color: #ffffff;
   letter-spacing: 0.15em;
   width: 100%;
   text-align: center; }
-  .s-first header {
+  .home header {
     position: fixed;
+    z-index: 1000;
     top: 0;
     width: 100%; }
-    .s-first header nav {
+    .home header nav {
       padding: 35px 0 0 35px;
       overflow: hidden;
       max-width: 65%;
       margin: auto; }
-      .s-first header nav a {
+      .home header nav a {
         margin: 30px 30px 0;
         padding: 5px 0;
         font-size: 1em;
         text-transform: uppercase;
         transition: 300ms; }
-      .s-first header nav .pull-left {
+      .home header nav .pull-left {
         float: left; }
-        .s-first header nav .pull-left:hover {
-          margin-top: 22px; }
-      .s-first header nav .pull-right {
+        .home header nav .pull-left:hover {
+          margin-top: 22px;
+          color: #16a085; }
+      .home header nav .pull-right {
         float: right;
         margin-right: 40px; }
-        .s-first header nav .pull-right:hover {
-          margin-top: 22px; }
-      .s-first header nav .logo {
+        .home header nav .pull-right:hover {
+          margin-top: 22px;
+          color: #16a085; }
+      .home header nav .logo {
         width: 60px;
         height: 63px;
         background: url(../img/logo.png) no-repeat;
@@ -83,70 +86,70 @@ button {
         left: 50%;
         margin-left: -30px;
         margin-top: 0; }
-  .s-first h1, .s-first p {
+  .home h1, .home p {
     text-align: center;
     text-indent: 25px; }
-  .s-first h1 {
+  .home h1 {
     margin: 0 auto 8px;
     padding-top: 335px;
     font-size: 2.25em;
     text-transform: uppercase;
     letter-spacing: 0.15em; }
-  .s-first p {
+  .home p {
     margin: 0 0 25px;
     font-family: "Gotham-Rounded-Medium", sans-serif;
     font-weight: normal;
     letter-spacing: 0.17em; }
-  .s-first .icons-block {
+  .home .icons-block {
     margin: 0 auto;
     padding-bottom: 20px;
     width: 134px;
     overflow: hidden; }
-    .s-first .icons-block .icons {
+    .home .icons-block .icons {
       width: 28px;
       margin: 0 5px;
       height: 26px;
       float: left; }
-    .s-first .icons-block .icon-twitter {
+    .home .icons-block .icon-twitter {
       background: url(../img/icon-twitter.png) no-repeat;
       margin-left: 20px; }
-    .s-first .icons-block .icon-flickr {
+    .home .icons-block .icon-flickr {
       background: url(../img/icon-flickr.png) no-repeat; }
-    .s-first .icons-block .icon-dribbble {
+    .home .icons-block .icon-dribbble {
       background: url(../img/icon-dribbble.png) no-repeat; }
 
-/* --- second section --- */
-.s-second {
+/* --- photoapp section --- */
+.photoapp {
   position: relative; }
-  .s-second .content {
+  .photoapp .content {
     background: #f5f6f7;
     background-size: cover;
     letter-spacing: 0.15em;
     overflow: hidden;
     width: 100%; }
-    .s-second .content .text-column {
+    .photoapp .content .text-column {
       float: left;
       width: 36%;
       margin-top: 110px;
       padding-left: 10%; }
-      .s-second .content .text-column h2 {
+      .photoapp .content .text-column h2 {
         color: #16a085;
         font-size: 1.125em;
         font-weight: normal;
         margin-top: 0;
         margin-bottom: 35px;
         text-transform: uppercase; }
-      .s-second .content .text-column p {
+      .photoapp .content .text-column p {
         color: #373737;
         line-height: 2 !important;
         font: 0.75em "Gotham-Rounded-Light", sans-serif;
         text-align: left;
         margin: 0 0 45px 0; }
-      .s-second .content .text-column button {
+      .photoapp .content .text-column button {
         color: #ffffff;
         margin-bottom: 90px;
         padding: 19px 45px 17px; }
-    .s-second .content .hand {
+    .photoapp .content .hand {
       background: url(../img/hand%20copy.png) no-repeat;
       background-size: cover;
       width: 62.7388535%;
@@ -155,62 +158,183 @@ button {
       right: -12px;
       top: 0; }
 
-/* --- third section --- */
-.s-third .content {
+/* --- design section --- */
+.design .content {
   letter-spacing: 0.15em;
   height: 558px;
   overflow: hidden; }
-  .s-third .content .mob-img {
+  .design .content .mob-img {
     background: url(../img/phone.png) no-repeat;
     background-size: cover;
     float: left;
     width: 45.8598726%;
     height: 100%; }
-  .s-third .content .text-column {
+  .design .content .text-column {
     float: right;
     width: 35.6687898%;
     margin-top: 142px;
     padding-right: 4%; }
-  .s-third .content h2 {
+  .design .content h2 {
     color: #16a085;
     font-size: 1.125em;
     font-weight: normal;
     margin-top: 0;
     margin-bottom: 32px;
     text-transform: uppercase; }
-  .s-third .content p {
+  .design .content p {
     color: #373737;
     line-height: 2 !important;
     font: 0.75em "Gotham-Rounded-Light", sans-serif;
     text-align: left;
     margin: 0 0 45px 0;
     padding-left: 5px; }
+  .design .content button {
+    color: #ffffff; }
 
-/* --- fourth section --- */
-.s-fourth .content {
+/* --- slider section --- */
+.slider-section .content {
   background: #f5f6f7;
   letter-spacing: 0.15em;
   font-weight: normal;
   overflow: hidden; }
-  .s-fourth .content .text-column {
+  .slider-section .content .text-column {
     color: #373737;
     float: left;
     margin-top: 157px;
     margin-left: 10%;
     width: 15%; }
-    .s-fourth .content .text-column .logo-colorized {
+    .slider-section .content .text-column .logo-colorized {
       background: url(../img/logo-2.png) no-repeat;
       width: 74px;
       height: 70px;
       margin: 0 auto 20px; }
-    .s-fourth .content .text-column h3 {
+    .slider-section .content .text-column h3 {
       font-size: 1em;
       text-transform: uppercase;
       margin-bottom: 20px; }
-    .s-fourth .content .text-column p {
+    .slider-section .content .text-column p {
       font: 0.625em "Gotham-Rounded-Medium", sans-serif;
       letter-spacing: 0.1em;
       text-align: center;
       padding: 0 15px; }
+
+/* --- subscribe section --- */
+.subscribe-section .content {
+  background: url(../img/section-5.jpg) no-repeat;
+  background-size: cover;
+  letter-spacing: 0.2em;
+  text-align: center; }
+  .subscribe-section .content form {
+    padding-top: 347px;
+    padding-bottom: 325px; }
+    .subscribe-section .content form label {
+      color: #ffffff;
+      display: block;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      text-indent: 15px;
+      padding-bottom: 26px; }
+    .subscribe-section .content form input[type="text"] {
+      border: none;
+      border-radius: 2px;
+      font-family: "Gotham-Rounded-Medium", sans-serif;
+      text-transform: uppercase;
+      margin-right: -63px;
+      margin-left: 17px;
+      padding: 0 56px 0 22px;
+      width: 255px;
+      height: 60px; }
+    .subscribe-section .content form input::-webkit-input-placeholder {
+      color: #373737; }
+    .subscribe-section .content form input:-moz-placeholder {
+      color: #373737; }
+    .subscribe-section .content form input:-ms-input-placeholder {
+      color: #373737; }
+    .subscribe-section .content form input[type="submit"] {
+      background: url(../img/check.png) no-repeat #16a085;
+      border: none;
+      border-radius: 0 2px 2px 0;
+      width: 63px;
+      height: 60px;
+      transition: 200ms; }
+      .subscribe-section .content form input[type="submit"]:hover {
+        background-color: #107360; }
+
+/* --- download section --- */
+.download .content {
+  background: #f5f6f7;
+  letter-spacing: 0.2em;
+  text-align: center; }
+  .download .content h3 {
+    font-size: 1.25em;
+    font-weight: normal;
+    margin: 0;
+    padding: 90px 0 5px 0;
+    text-transform: uppercase;
+    text-indent: 15px; }
+  .download .content p {
+    font: 0.75em "Gotham-Rounded-Medium", sans-serif;
+    text-transform: uppercase;
+    line-height: 1.8;
+    letter-spacing: 0.17em;
+    width: 67%;
+    margin: 0 auto 43px;
+    padding: 0 10px; }
+  .download .content .buttons-block {
+    overflow: hidden;
+    margin-left: 15px;
+    padding-bottom: 116px; }
+    .download .content .buttons-block .button {
+      background: #16a085;
+      border-radius: 2px;
+      color: #ffffff;
+      display: inline-block;
+      text-transform: uppercase;
+      text-align: left;
+      padding: 23px 60px 0 21px;
+      margin: 0 10px;
+      width: 213px;
+      height: 35px;
+      position: relative; }
+      .download .content .buttons-block .button .icon {
+        border-radius: 0 2px 2px 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 56px; }
+      .download .content .buttons-block .button .apple-store {
+        background: url(../img/apple-icon.png) no-repeat #138a72; }
+      .download .content .buttons-block .button .play-store {
+        background: url(../img/android-icon.png) no-repeat #138a72; }
+
+/* --- footer --- */
+footer {
+  overflow: hidden;
+  letter-spacing: 0.13em; }
+  footer .footer-info {
+    float: left;
+    margin: 40px 0 35px 9%; }
+    footer .footer-info nav {
+      margin-bottom: 20px;
+      padding-left: 8px; }
+      footer .footer-info nav a {
+        text-transform: uppercase;
+        font-size: .875em;
+        margin-bottom: 23px; }
+        footer .footer-info nav a::after {
+          content: "|";
+          padding-left: 8px; }
+        footer .footer-info nav a:last-child::after {
+          content: ""; }
+    footer .footer-info p {
+      font-size: .875em;
+      text-indent: 7px; }
+  footer .footer-icon {
+    background: url(../img/logo-2.png) no-repeat;
+    float: right;
+    margin: 30px 8.4% 0 0;
+    width: 74px;
+    height: 70px; }
 
 /*# sourceMappingURL=main.css.map */

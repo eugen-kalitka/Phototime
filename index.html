@@ -8,15 +8,15 @@
     <link href="css/jquery.bxslider.css" rel="stylesheet" />
 </head>
 <body>
-<section class="s-first">
+<section id="home" class="home">
 
     <header>
         <nav>
-            <a href="#" class="pull-left">Home</a>
-            <a href="#" class="pull-left">Photoapp</a>
+            <a href="#home" class="pull-left">Home</a>
+            <a href="#photoapp" class="pull-left">Photoapp</a>
             <a href="#" class="logo"></a>
-            <a href="#" class="pull-right">Download</a>
-            <a href="#" class="pull-right">Design</a>
+            <a href="#download" class="pull-right">Download</a>
+            <a href="#design" class="pull-right">Design</a>
 
         </nav>
     </header>
@@ -36,7 +36,7 @@
     </div>
 </section>
 
-<section class="s-second">
+<section id="photoapp" class="photoapp">
     <div class="content">
 
         <div class="text-column">
@@ -56,11 +56,61 @@
     </div>
 </section>
 
-<section class="s-third">
+<section id="design" class="design">
     <div class="content">
         <div class="mob-img"></div>
 
-        <div class="text-column">
+        <ul class="bxslider text-column">
+            <li>
+                <h2>Design</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut <span>enim ad minim</span> veniam, quis
+                    nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat.</p>
+            </li>
+            <li>
+                <h2>Design (2)</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut <span>enim ad minim</span> veniam, quis
+                    nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat.</p>
+            </li>
+            <li>
+                <h2>Design (3)</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut <span>enim ad minim</span> veniam, quis
+                    nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat.</p>
+            </li>
+            <li>
+                <h2>Design (4)</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut <span>enim ad minim</span> veniam, quis
+                    nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat.</p>
+            </li>
+            <li>
+                <h2>Design (5)</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut <span>enim ad minim</span> veniam, quis
+                    nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat.</p>
+            </li>
+
+        </ul>
+        <button>Learn More</button>
+
+        <!--<div class="bx-slider text-column">
             <h2>Design</h2>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -70,11 +120,11 @@
                 ut aliquip ex ea commodo consequat.</p>
 
             <button>Learn More</button>
-        </div>
+        </div>-->
     </div>
 </section>
 
-<section class="s-fourth">
+<section class="slider-section">
     <div class="content">
 
         <div class="text-column">
@@ -86,7 +136,7 @@
 
         </div>
 
-        <ul class="bxslider">
+        <ul class="bxslider-multiple">
             <li><img src="pic/slide-1.jpg" /></li>
             <li><img src="pic/slide-2.jpg" /></li>
             <li><img src="pic/slide-3.jpg" /></li>
@@ -95,12 +145,61 @@
     </div>
 </section>
 
+<section class="subscribe-section">
+    <div class="content">
+        <form action="#">
+
+            <label for="email-field">subscribe to us community</label>
+
+            <input type="text" id="email-field" placeholder="your email" required />
+            <input type="submit" value=" " />
+
+        </form>
+    </div>
+</section>
+
+<section id="download" class="download">
+    <div class="content">
+        <h3>Download it</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <div class="buttons-block">
+            <div class="button">apple store
+                <a href="#" class="apple-store icon"></a>
+            </div>
+
+            <div class="button">play store
+                <a href="#" class="play-store icon"></a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+
+    <div class="footer-info">
+        <nav>
+            <a href="#">credits</a>
+            <a href="#">privacy</a>
+            <a href="#">our teams</a>
+        </nav>
+        <p>Copyright by phototime - all right reserved</p>
+    </div>
+
+    <a href="#" class="footer-icon"></a>
+</footer>
+
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="js/jquery.bxslider.min.js"></script>
 
 <script>
     $(document).ready(function(){
         $('.bxslider').bxSlider({
+            pagerType: 'short'
+        });
+
+        $('.bxslider-multiple').bxSlider({
             minSlides: 2,
             maxSlides: 2,
             slideWidth: 370,

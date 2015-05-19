@@ -43,8 +43,6 @@ $font-light: 'Gotham-Rounded-Light', sans-serif;
   font-family: 'Gotham-Rounded-Bold', sans-serif;
 }
 
-
-
 a {
   text-decoration: none;
   color: inherit;
@@ -73,9 +71,9 @@ button {
 
 /* --- main styles --- */
 
-/* --- first section --- */
+/* --- home section --- */
 
-.s-first {
+.home {
   background: url(../img/section-1.jpg) no-repeat;
   background-size: cover;
   color: $primary-text-color;
@@ -84,6 +82,7 @@ button {
   text-align: center;
   header {
     position: fixed;
+    z-index: 1000;
     top: 0;
     width: 100%;
     nav {
@@ -102,6 +101,7 @@ button {
         float: left;
         &:hover {
           margin-top: 22px;
+          color: $button-and-titles-color;
         }
       }
       .pull-right {
@@ -109,6 +109,7 @@ button {
         margin-right: 40px;
         &:hover {
           margin-top: 22px;
+          color: $button-and-titles-color;
         }
       }
       .logo {
@@ -164,9 +165,11 @@ button {
   }
 }
 
-/* --- second section --- */
 
-.s-second {
+
+/* --- photoapp section --- */
+
+.photoapp {
   position: relative;
   .content{
     background: $background-color-secondary; //url(../img/hand.png) no-repeat
@@ -213,9 +216,11 @@ button {
 
 }
 
-/* --- third section --- */
 
-.s-third {
+
+/* --- design section --- */
+
+.design {
   .content {
     letter-spacing: 0.15em;
     height: 558px;
@@ -249,12 +254,15 @@ button {
       margin: 0 0 45px 0;
       padding-left: 5px;
     }
+    button {
+      color: $primary-text-color;
+    }
   }
 }
 
-/* --- fourth section --- */
+/* --- slider section --- */
 
-.s-fourth {
+.slider-section {
   .content {
     background: $background-color-secondary;
     letter-spacing: 0.15em;
@@ -284,7 +292,165 @@ button {
         padding: 0 15px;
       }
     }
+  }
+}
 
+
+
+/* --- subscribe section --- */
+
+.subscribe-section {
+  .content{
+    background: url(../img/section-5.jpg) no-repeat;
+    background-size: cover;
+    letter-spacing: 0.2em;
+    text-align: center;
+    form {
+      padding-top: 347px;
+      padding-bottom: 325px;
+      label {
+        color: $primary-text-color;
+        display: block;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        text-indent: 15px;
+        padding-bottom: 26px;
+      }
+        input[type="text"] {
+          border: none;
+          border-radius: 2px;
+          //color: #000; //$paragraph-text-color
+          font-family: $font-medium;
+          text-transform: uppercase;
+          margin-right: -63px;
+          margin-left: 17px;
+          padding: 0 56px 0 22px;
+          width: 255px;
+          height: 60px;
+        }
+        input::-webkit-input-placeholder {
+             color: $paragraph-text-color;
+           }
+        input:-moz-placeholder {
+          color: $paragraph-text-color;
+        }
+        input:-ms-input-placeholder {
+          color: $paragraph-text-color;
+        }
+
+        input[type="submit"] {
+          background: url(../img/check.png) no-repeat $button-and-titles-color; //
+          border: none;
+          border-radius: 0 2px 2px 0;
+          width: 63px;
+          height: 60px;
+          transition: 200ms;
+
+          &:hover {
+            background-color: darken($button-and-titles-color, 10%);
+          }
+        }
+    }
+  }
+}
+
+
+
+/* --- download section --- */
+
+.download {
+  .content {
+    background: $background-color-secondary;
+    letter-spacing: 0.2em;
+    text-align: center;
+    h3 {
+      font-size: 1.25em;
+      font-weight: normal;
+      margin: 0;
+      padding: 90px 0 5px 0;
+      text-transform: uppercase;
+      text-indent: 15px;
+    }
+    p {
+      font: .75em $font-medium;
+      text-transform: uppercase;
+      line-height: 1.8;
+      letter-spacing: 0.17em;
+      width: 67%;
+      margin: 0 auto 43px;
+      padding: 0 10px;
+    }
+    .buttons-block {
+      overflow: hidden;
+      margin-left: 15px;
+      padding-bottom: 116px;
+      .button {
+        background: $button-and-titles-color;
+        border-radius: 2px;
+        color: $primary-text-color;
+        display: inline-block;
+        text-transform: uppercase;
+        text-align: left;
+        padding: 23px 60px 0 21px;
+        margin: 0 10px;
+        width: 213px;
+        height: 35px;
+        position: relative;
+        .icon {
+          border-radius: 0 2px 2px 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 100%;
+          width: 56px;
+        }
+        .apple-store {
+          background: url(../img/apple-icon.png) no-repeat darken($button-and-titles-color, 5%);
+        }
+        .play-store {
+          background: url(../img/android-icon.png) no-repeat darken($button-and-titles-color, 5%);
+        }
+      }
+    }
+  }
+}
+
+
+/* --- footer --- */
+
+footer {
+  overflow: hidden;
+  letter-spacing: 0.13em;
+  .footer-info {
+    float: left;
+    margin: 40px 0 35px 9%;
+    nav {
+      margin-bottom: 20px;
+      padding-left: 8px;
+      a {
+        text-transform: uppercase;
+        font-size: .875em;
+        margin-bottom: 23px;
+        &::after {
+          content: "|";
+          padding-left: 8px;
+        }
+        &:last-child::after {
+          content: "";
+        }
+      }
+    }
+    p {
+      font-size: .875em;
+      text-indent: 7px;
+    }
+  }
+  .footer-icon {
+    background: url(../img/logo-2.png) no-repeat;
+    float: right;
+    margin: 30px 8.4% 0 0;
+    width: 74px;
+    height: 70px;
   }
 }
 

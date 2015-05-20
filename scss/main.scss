@@ -232,7 +232,19 @@ button {
       width: 45.8598726%;
       height: 100%;
     }
+
     .text-column {
+      float: right;
+      width: 35.6687898%;
+      padding-right: 4%;
+      button {
+        color: $primary-text-color;
+        padding: 18px 45px;
+        margin-bottom: 45px;
+      }
+    }
+
+    /*.text-column {
       float: right;
       width: 35.6687898%;
       margin-top: 142px;
@@ -256,7 +268,7 @@ button {
     }
     button {
       color: $primary-text-color;
-    }
+    }*/
   }
 }
 

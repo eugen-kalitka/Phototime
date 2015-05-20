@@ -14,12 +14,65 @@
 /** RESET AND LAYOUT
 ===================================*/
 
+/* --- styles for text slider in design section --- */
+
 .design .bx-wrapper {
-    float: right;
-    width: 35.6687898%;
-    margin-top: 142px;
-    padding-right: 4%;
+    margin-top: 126px;
+    margin-bottom: 17px;
+    position: relative;
 }
+
+    .bx-text-slider h2 {
+        font-size: 1.125em;
+        font-weight: normal;
+        margin-top: 0;
+        margin-bottom: 32px;
+        text-transform: uppercase;
+        color: #16a085;
+    }
+
+    .bx-text-slider p {
+        line-height: 1.9 !important;
+        font: .75em 'Gotham-Rounded-Light', sans-serif;
+        text-align: left;
+        margin: 0 0 37px 0;
+        padding-left: 5px;
+        color: #373737;
+    }
+
+.design #bx-pager {
+    font-size: .75em;
+    color: #373737;
+    margin-bottom: 2px;
+}
+
+.design #bx-controls-block {
+    position: relative;
+}
+
+    .design #bx-controls-block a {
+        text-indent: -9999px;
+        position: absolute;
+        width: 22px;
+        height: 24px;
+        transition: 200ms;
+    }
+
+    .design #custom-bx-prev {
+        background: url(../img/arrow-left.png) no-repeat;
+        left: -2px;
+    }
+    .design #custom-bx-prev:hover {
+        left: -7px;
+    }
+
+    .design #custom-bx-next {
+        background: url(../img/arrow-right.png) no-repeat;
+        left: 26px;
+    }
+    .design #custom-bx-next:hover {
+        left: 31px;
+    }
 
 /* --- styles for multiple slider in slider section --- */
 

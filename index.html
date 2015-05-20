@@ -60,67 +60,65 @@
     <div class="content">
         <div class="mob-img"></div>
 
-        <ul class="bxslider text-column">
-            <li>
-                <h2>Design</h2>
+        <div class="text-column">
+            <ul class="bx-text-slider">
+                <li>
+                    <h2>Design</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua. Ut <span>enim ad minim</span> veniam, quis
-                    nostrud exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat.</p>
-            </li>
-            <li>
-                <h2>Design (2)</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut <span>enim ad minim</span> veniam, quis
+                        nostrud exercitation ullamco laboris nisi
+                        ut aliquip ex ea commodo consequat.</p>
+                </li>
+                <li>
+                    <h2>Design (2)</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua. Ut <span>enim ad minim</span> veniam, quis
-                    nostrud exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat.</p>
-            </li>
-            <li>
-                <h2>Design (3)</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. </p>
+                </li>
+                <li>
+                    <h2>Design (3)</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua. Ut <span>enim ad minim</span> veniam, quis
-                    nostrud exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat.</p>
-            </li>
-            <li>
-                <h2>Design (4)</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut <span>enim ad minim</span> veniam, quis
+                        nostrud exercitation ullamco laboris nisi
+                        ut aliquip ex ea commodo consequat.Lorem ipsum dolor</p>
+                </li>
+                <li>
+                    <h2>Design (4)</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua. Ut <span>enim ad minim</span> veniam, quis
-                    nostrud exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat.</p>
-            </li>
-            <li>
-                <h2>Design (5)</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut <span>enim ad minim</span> veniam, quis
+                        nostrud exercitation ullamco laboris nisi
+                        ut aliquip ex ea commodo consequat.</p>
+                </li>
+                <li>
+                    <h2>Design (5)</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua. Ut <span>enim ad minim</span> veniam, quis
-                    nostrud exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat.</p>
-            </li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut <span>enim ad minim</span> veniam, quis
+                        nostrud exercitation ullamco laboris nisi
+                        ut aliquip ex ea commodo consequat.</p>
+                </li>
 
-        </ul>
-        <button>Learn More</button>
-
-        <!--<div class="bx-slider text-column">
-            <h2>Design</h2>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut <span>enim ad minim</span> veniam, quis
-                nostrud exercitation ullamco laboris nisi
-                ut aliquip ex ea commodo consequat.</p>
+            </ul>
 
             <button>Learn More</button>
-        </div>-->
+
+            <div id="bx-pager"></div>
+
+            <div id="bx-controls-block">
+                <a href="#" id="custom-bx-prev"></a>
+                <a href="#" id="custom-bx-next"></a>
+            </div>
+
+        </div>
+
     </div>
 </section>
 
@@ -195,8 +193,17 @@
 
 <script>
     $(document).ready(function(){
-        $('.bxslider').bxSlider({
-            pagerType: 'short'
+        $('.bx-text-slider').bxSlider({
+            pagerType: 'short',
+            pagerSelector: '#bx-pager',
+            prevSelector: '#custom-bx-prev',
+            nextSelector: '#custom-bx-next',
+            onSliderLoad: function(current) {
+                $('#bx-pager').text("0"+(current+1) + "/0"+5);
+            },
+            onSlideBefore: function ($slideElement, oldIndex, newIndex) {
+                $('#bx-pager').text("0"+(newIndex+1) + "/0"+5);
+            }
         });
 
         $('.bxslider-multiple').bxSlider({
@@ -207,5 +214,6 @@
         });
     });
 </script>
+
 </body>
 </html>

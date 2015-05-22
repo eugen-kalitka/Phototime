@@ -80,46 +80,59 @@ button {
   letter-spacing: 0.15em;
   width: 100%;
   text-align: center;
+  header.scrolling {
+    background: rgba(170, 170, 170, 0.4);
+  }
   header {
     position: fixed;
     z-index: 1000;
     top: 0;
     width: 100%;
+    padding-bottom: 20px;
+
+    .logo {
+      background: url(../img/logo.png) no-repeat;
+      margin: 36px 0 0 -40px;
+      position: absolute;
+      left: 50%;
+      width: 60px;
+      height: 63px;
+    }
     nav {
-      padding: 35px 0 0 35px;
-      overflow: hidden;
+      padding: 45px 45px 0 35px;
       max-width: 65%;
+      text-align: center;
       margin: auto;
-      a {
-        margin: 30px 30px 0;
-        padding: 5px 0;
-        font-size: 1em;
-        text-transform: uppercase;
-        transition: 300ms;
-      }
-      .pull-left {
-        float: left;
-        &:hover {
-          margin-top: 22px;
-          color: $button-and-titles-color;
+      ul {
+        list-style: none;
+        padding: 0;
+        .pull-left {
+          float: left;
         }
-      }
-      .pull-right {
-        float: right;
-        margin-right: 40px;
-        &:hover {
-          margin-top: 22px;
-          color: $button-and-titles-color;
+        .pull-right {
+          float: right;
         }
-      }
-      .logo {
-        width: 60px;
-        height: 63px;
-        background: url(../img/logo.png) no-repeat;
-        position: absolute;
-        left: 50%;
-        margin-left: -30px;
-        margin-top: 0;
+        li {
+          display: inline-block;
+          padding: 12px 25px;
+          &:nth-child(2) {
+            padding-left: 50px;
+          }
+          &:nth-child(4) {
+            padding-right: 40px;
+          }
+          a {
+            text-transform: uppercase;
+            transition: 200ms;
+            &:hover {
+              color: $button-and-titles-color;
+            }
+          }
+        }
+        &:after {
+          content: "";
+          clear: both;
+        }
       }
     }
   }
@@ -144,17 +157,20 @@ button {
   .icons-block {
     margin: 0 auto;
     padding-bottom: 20px;
-    width: 134px;
-    overflow: hidden;
     .icons {
       width: 28px;
-      margin: 0 5px;
+      margin: 0 1px;
       height: 26px;
-      float: left;
+      display: inline-block;
+      transition: 500ms;
+      &:hover {
+        transform: rotate(360deg);
+        opacity: 0.8;
+      }
     }
     .icon-twitter {
       background: url(../img/icon-twitter.png) no-repeat;
-      margin-left: 20px;
+      margin-left: 6px;
     }
     .icon-flickr {
       background: url(../img/icon-flickr.png) no-repeat;
@@ -341,8 +357,8 @@ button {
           height: 60px;
         }
         input::-webkit-input-placeholder {
-             color: $paragraph-text-color;
-           }
+          color: $paragraph-text-color;
+        }
         input:-moz-placeholder {
           color: $paragraph-text-color;
         }

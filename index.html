@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Phototime</title>
-    <link href="scss/main.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
     <link href="css/jquery.bxslider.css" rel="stylesheet" />
 </head>
 <body>
 <section id="home" class="home">
 
     <header>
-        <nav>
-            <a href="#home" class="pull-left">Home</a>
-            <a href="#photoapp" class="pull-left">Photoapp</a>
-            <a href="#" class="logo"></a>
-            <a href="#download" class="pull-right">Download</a>
-            <a href="#design" class="pull-right">Design</a>
 
+        <div class="logo"></div>
+
+        <nav>
+            <ul>
+                <li class="pull-left"><a href="#">Home</a></li>
+                <li class="pull-left"><a href="#">Photoapp</a></li>
+                <li class="pull-right"><a href="#">Download</a></li>
+                <li class="pull-right"><a href="#">Design</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -212,6 +215,18 @@
             slideWidth: 370,
             slideMargin: 25
         });
+    });
+</script>
+
+<script>
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 700) {
+            $("header").addClass("scrolling");
+        } else {
+            $("header").removeClass("scrolling");
+        }
     });
 </script>
 

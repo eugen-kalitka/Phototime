@@ -74,14 +74,14 @@ button {
 /* --- home section --- */
 
 .home {
-  background: url(../img/section-1.jpg) no-repeat;
+  //background: url(../img/section-1.jpg) no-repeat;
   background-size: cover;
   color: $primary-text-color;
   letter-spacing: 0.15em;
   width: 100%;
   text-align: center;
   header.scrolling {
-    background: rgba(170, 170, 170, 0.4);
+    background: rgba(170, 170, 170, 0.4);  // appearing on scroll
   }
   header {
     position: fixed;
@@ -329,7 +329,7 @@ button {
 
 .subscribe-section {
   .content{
-    background: url(../img/section-5.jpg) no-repeat;
+    //background: url(../img/section-5.jpg) no-repeat;
     background-size: cover;
     letter-spacing: 0.2em;
     text-align: center;

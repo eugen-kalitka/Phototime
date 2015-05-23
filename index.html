@@ -10,33 +10,36 @@
 <body>
 <section id="home" class="home parallax-container" data-parallax="scroll" data-position="top" data-bleed="10" data-image-src="./img/section-1.jpg">
 
-    <header>
+    <div class="content">
+        <header>
 
-        <div class="logo"></div>
+            <div class="logo"></div>
 
-        <nav>
-            <ul>
-                <li class="pull-left"><a href="#">Home</a></li>
-                <li class="pull-left"><a href="#">Photoapp</a></li>
-                <li class="pull-right"><a href="#">Download</a></li>
-                <li class="pull-right"><a href="#">Design</a></li>
-            </ul>
-        </nav>
-    </header>
+            <nav>
+                <ul>
+                    <li class="pull-left"><a href="#">Home</a></li>
+                    <li class="pull-left"><a href="#">Photoapp</a></li>
+                    <li class="pull-right"><a href="#">Download</a></li>
+                    <li class="pull-right"><a href="#">Design</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <div class="container-first">
-        <h1>your life , a photo</h1>
+        <div class="container">
+            <h1>your life , a photo</h1>
 
-        <p class="tagline">print your life in a simple photo</p>
+            <p class="tagline">print your life in a simple photo</p>
 
-        <button>get started</button>
+            <button>get started</button>
 
-        <div class="icons-block">
-            <a href="#" class="icons icon-twitter"></a>
-            <a href="#" class="icons icon-flickr"></a>
-            <a href="#" class="icons icon-dribbble"></a>
+            <div class="icons-block">
+                <a href="#" class="icons icon-twitter"></a>
+                <a href="#" class="icons icon-flickr"></a>
+                <a href="#" class="icons icon-dribbble"></a>
+            </div>
         </div>
     </div>
+
 </section>
 
 <section id="photoapp" class="photoapp">
@@ -152,7 +155,7 @@
 
             <label for="email-field">subscribe to us community</label>
 
-            <input type="text" id="email-field" placeholder="your email" required />
+            <input type="text" id="email-field" name="email" placeholder="your email" required />
             <input type="submit" value=" " />
 
         </form>
@@ -162,6 +165,7 @@
 <section id="download" class="download">
     <div class="content">
         <h3>Download it</h3>
+
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
         <div class="buttons-block">
@@ -224,7 +228,7 @@
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
 
-        if (scroll >= 700) {
+        if (scroll >= 600) {
             $("header").addClass("scrolling");
         } else {
             $("header").removeClass("scrolling");

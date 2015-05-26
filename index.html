@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Phototime</title>
+
     <link href="css/main.css" rel="stylesheet" />
     <link href="css/jquery.bxslider.css" rel="stylesheet" />
+<!--    <link href="css/responsive-nav.css" rel="stylesheet" />-->
+
+    <script src="js/responsive-nav.min.js"></script>
 </head>
 <body>
 <section id="home" class="home parallax-container" data-parallax="scroll" data-position="top" data-bleed="10" data-image-src="./img/section-1.jpg">
@@ -15,14 +19,18 @@
 
             <div class="logo"></div>
 
-            <nav>
-                <ul>
-                    <li class="pull-left"><a href="#">Home</a></li>
-                    <li class="pull-left"><a href="#">Photoapp</a></li>
-                    <li class="pull-right"><a href="#">Download</a></li>
-                    <li class="pull-right"><a href="#">Design</a></li>
-                </ul>
+            <nav class="nav-primary">
+                <div class="wrap">
+                    <ul class="nav-menu">
+                        <li class="menu-item"><a href="#">Home</a></li>
+                        <li class="menu-item"><a href="#">Photoapp</a></li>
+                        <li class="menu-item split-right"><a href="#">Design</a></li>
+                        <li class="menu-item"><a href="#">Download</a></li>
+                    </ul>
+                </div>
+
             </nav>
+
         </header>
 
         <div class="container">
@@ -58,13 +66,13 @@
             <button>get started</button>
         </div>
 
-        <div class="hand"></div>
+        <div class="hand-image"></div>
     </div>
 </section>
 
 <section id="design" class="design">
     <div class="content">
-        <div class="mob-img"></div>
+        <div class="phone-img"></div>
 
         <div class="text-column">
             <ul class="bx-text-slider">
@@ -183,8 +191,8 @@
 
 <footer>
 
-    <div class="footer-info">
-        <nav>
+    <div class="footer-info-wrapper">
+        <nav class="footer-nav">
             <a href="#">credits</a>
             <a href="#">privacy</a>
             <a href="#">our teams</a>
@@ -197,7 +205,6 @@
 
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="js/jquery.bxslider.min.js"></script>
-
 <script src="js/parallax.min.js"></script>
 
 <script>
@@ -235,6 +242,15 @@
         }
     });
 </script>
+
+<!--<script>
+    var nav = responsiveNav(".nav-collapse", {
+        customToggle: "nav-toggle"
+        //openPos: "static"
+    });
+    nav.open(document.getElementById("nav-toggle").class = "active");
+
+</script>-->
 
 </body>
 </html>

@@ -17,7 +17,6 @@
 /* --- styles for text slider in design section --- */
 
 .design .bx-wrapper {
-    margin-top: 126px;
     margin-bottom: 17px;
     position: relative;
 }
@@ -77,10 +76,11 @@
 /* --- styles for multiple slider in slider section --- */
 
 .slider-section .bx-wrapper {
-    float: right;
+    float: left;
     position: relative;
+    width: 60.9076433%;
     padding: 0;
-    margin: 104px 115px 120px 0;
+    margin: 104px 0 120px 6.4490446%; /*right - 115px/ 9.156051% */
 }
 
 .slider-section .bx-wrapper img {
@@ -127,3 +127,11 @@
     .slider-section .bx-next:hover{
         right: -10px;
     }
+
+@media screen and (max-width: 968px) {
+    .slider-section .bx-wrapper {
+        margin: 10px auto 30px;
+        float: none;
+        width: 82%;
+    }
+}

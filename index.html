@@ -7,9 +7,7 @@
 
     <link href="css/main.css" rel="stylesheet" />
     <link href="css/jquery.bxslider.css" rel="stylesheet" />
-<!--    <link href="css/responsive-nav.css" rel="stylesheet" />-->
 
-    <script src="js/responsive-nav.min.js"></script>
 </head>
 <body>
 <section id="home" class="home parallax-container" data-parallax="scroll" data-position="top" data-bleed="10" data-image-src="./img/section-1.jpg">
@@ -19,9 +17,14 @@
 
             <div class="logo"></div>
 
+            <div id="nav-toggle" class="nav-toggle">
+                <span class="nav-pill"></span>
+                <span class="menu-title">Menu</span>
+            </div>
+
             <nav class="nav-primary">
                 <div class="wrap">
-                    <ul class="nav-menu">
+                    <ul id="nav-menu" class="nav-menu">
                         <li class="menu-item"><a href="#">Home</a></li>
                         <li class="menu-item"><a href="#">Photoapp</a></li>
                         <li class="menu-item split-right"><a href="#">Design</a></li>
@@ -243,14 +246,24 @@
     });
 </script>
 
-<!--<script>
-    var nav = responsiveNav(".nav-collapse", {
-        customToggle: "nav-toggle"
-        //openPos: "static"
-    });
-    nav.open(document.getElementById("nav-toggle").class = "active");
+<script>
+    function windowSize() {
+        if ($(window).width() < 585){
+            $('#nav-toggle').show();
+            $('#nav-menu').hide();
+        } else {
+            $('#nav-toggle').hide();
+            $('#nav-menu').show();
+        }
+    }
+    $(window).load(windowSize);
+    $(window).resize(windowSize);
 
-</script>-->
+    $('#nav-toggle').click(function(){
+       $('#nav-menu').toggle("slow");
+    });
+
+</script>
 
 </body>
 </html>

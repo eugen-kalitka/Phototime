@@ -103,6 +103,7 @@ button {
     header.scrolling {  /* appears when scrolling! */
       background: $header-scroll;
       top: -30px;
+      padding-bottom: 10px;
       transition: 500ms;
     }
     header {
@@ -121,6 +122,37 @@ button {
         width: 60px;
         height: 63px;
       } //end logo
+
+/*NAV-TOGGLE STYLES*/
+
+  .nav-toggle {
+    position: absolute;
+    text-transform: uppercase;
+    left: $left-field;
+    top: 60px;
+    &:hover > .nav-pill {
+      background: url(../img/arrow-nav-scroll.png) center no-repeat;
+      border-color: $button-and-titles-color;
+    }
+    &:hover > .menu-title {
+      color: $button-and-titles-color;
+    }
+    .menu-title {
+      cursor: default;
+      vertical-align: 6px;
+      transition: 300ms;
+    }
+    .nav-pill {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      border: 2px solid $primary-text-color;
+      border-radius: 50%;
+      background: url(../img/arrow-nav.png) center no-repeat;
+      transition: 300ms;
+    }
+  }
+
 
       .nav-primary {
         margin-top: 38px;

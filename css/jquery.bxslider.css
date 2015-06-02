@@ -58,7 +58,7 @@
     }
 
     .design #custom-bx-prev {
-        background: url(../img/arrow-left.png) no-repeat;
+        background: url(../img/main-sprite.png) -212px -20px no-repeat;
         left: -2px;
     }
     .design #custom-bx-prev:hover {
@@ -66,7 +66,7 @@
     }
 
     .design #custom-bx-next {
-        background: url(../img/arrow-right.png) no-repeat;
+        background: url(../img/main-sprite.png) -82px -148px no-repeat;
         left: 26px;
     }
     .design #custom-bx-next:hover {
@@ -111,7 +111,7 @@
 }
 
     .slider-section .bx-prev {
-        background: url(../img/arrow-left.png) no-repeat;
+        background: url(../img/main-sprite.png) -212px -20px no-repeat;
         top: -15px;
         right: 20px;
     }
@@ -120,7 +120,7 @@
     }
 
     .slider-section .bx-next {
-        background: url(../img/arrow-right.png) no-repeat;
+        background: url(../img/main-sprite.png) -82px -148px no-repeat;
         top: -15px;
         right: -5px;
     }

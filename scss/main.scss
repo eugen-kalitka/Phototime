@@ -117,7 +117,7 @@ button {
         top: 35px;
         left: 0;
         right: 0;
-        background: url(../img/logo.png) no-repeat;
+        background: url(../img/main-sprite.png) -20px -218px no-repeat;
         margin: 0 auto;
         width: 60px;
         height: 63px;
@@ -131,7 +131,7 @@ button {
     left: $left-field;
     top: 60px;
     &:hover > .nav-pill {
-      background: url(../img/arrow-nav-scroll.png) center no-repeat;
+      background: url(../img/main-sprite.png) -18px -148px no-repeat;
       border-color: $button-and-titles-color;
     }
     &:hover > .menu-title {
@@ -140,7 +140,6 @@ button {
     .menu-title {
       cursor: default;
       vertical-align: 6px;
-      transition: 300ms;
     }
     .nav-pill {
       display: inline-block;
@@ -148,8 +147,7 @@ button {
       height: 25px;
       border: 2px solid $primary-text-color;
       border-radius: 50%;
-      background: url(../img/arrow-nav.png) center no-repeat;
-      transition: 300ms;
+      background: url(../img/main-sprite.png) -210px -84px no-repeat;
     }
   }
 
@@ -225,20 +223,21 @@ button {
         height: 26px;
         display: inline-block;
         transition: 500ms;
-        &:hover {
+        &:hover,
+        &:focus {
           transform: rotate(360deg);
           opacity: 0.8;
         }
       }
       .icon-twitter {
-        background: url(../img/icon-twitter.png) no-repeat;
+        background: url(../img/main-sprite.png) -247px -152px no-repeat;
         margin-left: 6px;
       }
       .icon-flickr {
-        background: url(../img/icon-flickr.png) no-repeat;
+        background: url(../img/main-sprite.png) -274px -86px no-repeat;
       }
       .icon-dribbble {
-        background: url(../img/icon-dribbble.png) no-repeat;
+        background: url(../img/main-sprite.png) -274px -20px no-repeat;
       }
     } //end icons-block
 } //end home section
@@ -343,7 +342,7 @@ button {
       //max-width: 765px; // as .bx-wrapper
       text-align: center;
       .logo-colorized {
-        background: url(../img/logo-2.png) no-repeat;
+        background: url(../img/main-sprite.png) -247px -218px no-repeat;
         width: 74px;
         height: 70px;
         margin: 0 auto 20px;
@@ -405,7 +404,7 @@ button {
         }
 
         input[type="submit"] {
-          background: url(../img/check.png) no-repeat $button-and-titles-color;
+          background: url(../img/main-sprite.png) -144px -148px no-repeat $button-and-titles-color;
           border: none;
           border-radius: 0 2px 2px 0;
           width: 63px;
@@ -468,10 +467,10 @@ button {
           width: 56px;
         }
         .apple-store {
-          background: url(../img/apple-icon.png) no-repeat darken($button-and-titles-color, 5%);
+          background: url(../img/main-sprite.png) -116px -20px darken($button-and-titles-color, 5%);
         }
         .play-store {
-          background: url(../img/android-icon.png) no-repeat darken($button-and-titles-color, 5%);
+          background: url(../img/main-sprite.png) -20px -20px darken($button-and-titles-color, 5%);
         }
     } //end-buttons block
 } //end download
@@ -509,7 +508,7 @@ footer {
     }
 
   .footer-icon {
-    background: url(../img/logo-2.png) no-repeat;
+    background: url(../img/main-sprite.png) -247px -218px no-repeat;
     float: right;
     margin: 30px 8.4% 35px 0;
     width: 74px;

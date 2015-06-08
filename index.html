@@ -8,6 +8,17 @@
     <link href="css/main.css" rel="stylesheet" />
     <link href="css/jquery.bxslider.css" rel="stylesheet" />
 
+
+    <!--[if lt IE 9]>
+        <link href="css/ie8.css" rel="stylesheet" />
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!--[if lte IE 9]>
+        <script src="js/placeholder.js"></script>
+    <![endif]-->
+
 </head>
 <body>
 <section id="home" class="home parallax-container" data-parallax="scroll" data-position="top" data-bleed="10" data-image-src="./img/section-1.jpg">
@@ -17,7 +28,7 @@
 
             <div class="logo"></div>
 
-            <div id="nav-toggle" class="nav-toggle">
+            <div tabindex="1" id="nav-toggle" class="nav-toggle">
                 <span class="nav-pill"></span>
                 <span class="menu-title">Menu</span>
             </div>
@@ -130,8 +141,8 @@
             <div id="bx-pager"></div>
 
             <div id="bx-controls-block">
-                <a href="#" id="custom-bx-prev"></a>
-                <a href="#" id="custom-bx-next"></a>
+                <span id="custom-bx-prev"></span>
+                <span id="custom-bx-next"></span>
             </div>
 
         </div>
@@ -160,7 +171,7 @@
     </div>
 </section>
 
-<section class="subscribe-section parallax-container" data-parallax="scroll" data-position="top" data-bleed="10"  data-image-src="./img/section-5.jpg">
+<section class="subscribe-section parallax-container" data-parallax="scroll" data-natural-height="790" data-natural-width="1256" data-position="top" data-bleed="10"  data-image-src="./img/section-5.jpg">
     <div class="content">
         <form action="#">
 
@@ -212,17 +223,28 @@
 
 <script>
     $(document).ready(function(){
-        $('.bx-text-slider').bxSlider({
+        var textSlider = $('.bx-text-slider').bxSlider({
             pagerType: 'short',
             pagerSelector: '#bx-pager',
             prevSelector: '#custom-bx-prev',
             nextSelector: '#custom-bx-next',
+            nextText: '',
+            prevText: '',
             onSliderLoad: function(current) {
                 $('#bx-pager').text("0"+(current+1) + "/0"+5);
             },
             onSlideBefore: function ($slideElement, oldIndex, newIndex) {
                 $('#bx-pager').text("0"+(newIndex+1) + "/0"+5);
             }
+        });
+
+        $('#custom-bx-prev').click(function () {
+            var current = textSlider.getCurrentSlide();
+            textSlider.goToPrevSlide(current) - 1;
+        });
+        $('#custom-bx-next').click(function () {
+            var current = textSlider.getCurrentSlide();
+            textSlider.goToNextSlide(current) + 1;
         });
 
         $('.bxslider-multiple').bxSlider({
@@ -259,8 +281,10 @@
     $(window).load(windowSize);
     $(window).resize(windowSize);
 
-    $('#nav-toggle').click(function(){
-       $('#nav-menu').toggle("slow");
+    $('#nav-toggle').on('keypress click', function(e){
+        if (e.which === 13 || e.type === 'click') {
+            $('#nav-menu').toggle("slow");
+        }
     });
 
 </script>

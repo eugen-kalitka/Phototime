@@ -50,26 +50,26 @@
 }
 
     .design #bx-controls-block a {
-        text-indent: -9999px;
         position: absolute;
         width: 22px;
         height: 24px;
         transition: 200ms;
     }
-
-    .design #custom-bx-prev {
+    .design .bx-prev {
         background: url(../img/main-sprite.png) -212px -20px no-repeat;
         left: -2px;
     }
-    .design #custom-bx-prev:hover {
+    .design .bx-prev:hover,
+    .design .bx-prev:focus {
         left: -7px;
     }
 
-    .design #custom-bx-next {
+    .design .bx-next {
         background: url(../img/main-sprite.png) -82px -148px no-repeat;
         left: 26px;
     }
-    .design #custom-bx-next:hover {
+    .design .bx-next:hover,
+    .design .bx-next:focus {
         left: 31px;
     }
 
@@ -115,7 +115,8 @@
         top: -15px;
         right: 20px;
     }
-    .slider-section .bx-prev:hover {
+    .slider-section .bx-prev:hover,
+    .slider-section .bx-prev:focus {
         right: 25px;
     }
 
@@ -124,7 +125,8 @@
         top: -15px;
         right: -5px;
     }
-    .slider-section .bx-next:hover{
+    .slider-section .bx-next:hover,
+    .slider-section .bx-next:focus {
         right: -10px;
     }
 

@@ -2,25 +2,26 @@
 @import url(../css/normalize.css);
 @font-face {
   font-family: 'Gotham-Rounded-Bold';
-  src: url("../fonts/Gotham-Rounded-Bold_21016.eot");
+  src: url("../fonts/GothamRounded-Bold.eot");
   src: local("☺"), url("../fonts/Gotham-Rounded-Bold_21016.woff") format("woff"), url("../fonts/Gotham-Rounded-Bold_21016.ttf") format("truetype"), url("../fonts/Gotham-Rounded-Bold_21016.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Gotham-Rounded-Medium';
-  src: url("../fonts/Gotham-Rounded-Medium_21022.eot");
+  src: url("../fonts/GothamRounded-Medium.eot");
   src: local("☺"), url("../fonts/Gotham-Rounded-Medium_21022.woff") format("woff"), url("../fonts/Gotham-Rounded-Medium_21022.ttf") format("truetype"), url("../fonts/Gotham-Rounded-Medium_21022.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Gotham-Rounded-Light';
-  src: url("../fonts/Gotham-Rounded-Light_21020.eot");
+  src: url("../fonts/GothamRounded-Light.eot");
   src: local("☺"), url("../fonts/Gotham-Rounded-Light_21020.woff") format("woff"), url("../fonts/Gotham-Rounded-Light_21020.ttf") format("truetype"), url("../fonts/Gotham-Rounded-Light_21020.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 /* variables */
 /* mixins */
 /* functions */
+/* --- overall styles --- */
 body {
   font-family: 'Gotham-Rounded-Bold', sans-serif; }
 
@@ -28,7 +29,9 @@ a {
   text-decoration: none;
   color: inherit; }
 
-/* --- button-styles --- */
+*:focus {
+  outline: none; }
+
 button {
   background: #16a085;
   font-size: 0.75em;
@@ -39,10 +42,10 @@ button {
   transition: 300ms;
   border: none;
   border-radius: 2px; }
-  button:hover {
+  button:hover, button:focus {
     background: #107360; }
 
-/* --- main styles --- */
+/* --- layout styles --- */
 .content {
   letter-spacing: 0.15em; }
 
@@ -56,7 +59,7 @@ button {
   .home header.scrolling {
     /* appears when scrolling! */
     background: rgba(170, 170, 170, 0.4);
-    top: -30px;
+    top: -25px;
     padding-bottom: 10px;
     transition: 500ms; }
   .home header {
@@ -78,10 +81,10 @@ button {
     text-transform: uppercase;
     left: 9%;
     top: 60px; }
-    .home .nav-toggle:hover > .nav-pill {
+    .home .nav-toggle:hover > .nav-pill, .home .nav-toggle:focus > .nav-pill {
       background: url(../img/main-sprite.png) -18px -148px no-repeat;
       border-color: #16a085; }
-    .home .nav-toggle:hover > .menu-title {
+    .home .nav-toggle:hover > .menu-title, .home .nav-toggle:focus > .menu-title {
       color: #16a085; }
     .home .nav-toggle .menu-title {
       cursor: default;
@@ -126,7 +129,7 @@ button {
       padding: 32px;
       padding: 2rem;
       position: relative; }
-      .home .nav-primary a:hover {
+      .home .nav-primary a:hover, .home .nav-primary a:focus {
         color: #16a085; }
   .home h1 {
     margin: 0 auto 8px;
@@ -208,7 +211,8 @@ button {
     bottom: 0;
     padding-left: 9%;
     width: 60%;
-    height: 100%; }
+    height: 100%;
+    z-index: -1; }
   .design .text-column {
     float: right;
     width: 35.66879%;
@@ -285,7 +289,7 @@ button {
     width: 63px;
     height: 60px;
     transition: 200ms; }
-    .subscribe-section form input[type="submit"]:hover {
+    .subscribe-section form input[type="submit"]:hover, .subscribe-section form input[type="submit"]:focus {
       background-color: #107360; }
 
 /* --- download section --- */
@@ -315,10 +319,9 @@ button {
     display: inline-block;
     text-transform: uppercase;
     text-align: left;
-    padding: 23px 60px 0 21px;
+    padding: 23px 60px 16px 21px;
     margin: 0 10px 20px;
     width: 213px;
-    height: 35px;
     position: relative;
     border: none;
     border-radius: 2px; }
@@ -328,11 +331,16 @@ button {
     right: 0;
     top: 0;
     height: 100%;
-    width: 56px; }
+    width: 56px;
+    transition: 300ms; }
   .download .buttons-block .apple-store {
     background: url(../img/main-sprite.png) -116px -20px #138a72; }
+    .download .buttons-block .apple-store:hover, .download .buttons-block .apple-store:focus {
+      background-color: #107360; }
   .download .buttons-block .play-store {
     background: url(../img/main-sprite.png) -20px -20px #138a72; }
+    .download .buttons-block .play-store:hover, .download .buttons-block .play-store:focus {
+      background-color: #107360; }
 
 /* --- footer --- */
 footer {
@@ -348,6 +356,8 @@ footer {
       text-transform: uppercase;
       font-size: .875em;
       margin-bottom: 23px; }
+      footer .footer-nav a:focus {
+        text-decoration: underline; }
       footer .footer-nav a::after {
         content: "|";
         padding-left: 8px; }
@@ -430,10 +440,22 @@ footer {
       padding: 0;
       margin: 0; } }
 @media screen and (max-width: 472px) {
+  .home .nav-primary .menu-item {
+    display: block;
+    text-align: left; }
+
   .home .nav-primary a {
-    padding: 1rem 0.8rem; }
+    padding: 16px 37px;
+    padding: 1rem 2.3rem; }
+
+  .slider-section .text-column .logo-colorized {
+    float: none;
+    margin: auto; }
 
   .subscribe-section form input[type="text"] {
-    width: 200px; } }
+    width: 150px; }
+
+  .download .buttons-block .button {
+    width: 150px; } }
 
 /*# sourceMappingURL=main.css.map */

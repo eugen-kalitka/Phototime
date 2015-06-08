@@ -1,0 +1,10 @@
+.subscribe-section form #email-field {
+	line-height: 60px;
+}
+.subscribe-section form input[type="submit"] {
+	height: 61px;
+}
+.home header.scrolling {
+	background: transparent;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#66aaaaaa, endColorstr=#66aaaaaa)";
+}

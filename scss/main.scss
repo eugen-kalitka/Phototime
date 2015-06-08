@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'Gotham-Rounded-Bold';
-  src: url('../fonts/Gotham-Rounded-Bold_21016.eot');
+  src: url('../fonts/GothamRounded-Bold.eot');
   src: local('☺'), url('../fonts/Gotham-Rounded-Bold_21016.woff') format('woff'),
   url('../fonts/Gotham-Rounded-Bold_21016.ttf') format('truetype'),
   url('../fonts/Gotham-Rounded-Bold_21016.svg') format('svg');
@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: 'Gotham-Rounded-Medium';
-  src: url('../fonts/Gotham-Rounded-Medium_21022.eot');
+  src: url('../fonts/GothamRounded-Medium.eot');
   src: local('☺'), url('../fonts/Gotham-Rounded-Medium_21022.woff') format('woff'),
   url('../fonts/Gotham-Rounded-Medium_21022.ttf') format('truetype'),
   url('../fonts/Gotham-Rounded-Medium_21022.svg') format('svg');
@@ -22,7 +22,7 @@
 
 @font-face {
   font-family: 'Gotham-Rounded-Light';
-  src: url('../fonts/Gotham-Rounded-Light_21020.eot');
+  src: url('../fonts/GothamRounded-Light.eot');
   src: local('☺'), url('../fonts/Gotham-Rounded-Light_21020.woff') format('woff'),
   url('../fonts/Gotham-Rounded-Light_21020.ttf') format('truetype'),
   url('../fonts/Gotham-Rounded-Light_21020.svg') format('svg');
@@ -56,6 +56,7 @@ $left-field: 9%;
 
 
 
+/* --- overall styles --- */
 
 body {
   font-family: 'Gotham-Rounded-Bold', sans-serif;
@@ -66,7 +67,9 @@ a {
   color: inherit;
 }
 
-/* --- button-styles --- */
+*:focus {
+  outline: none
+}
 
 button {
   background: $button-and-titles-color;
@@ -77,14 +80,15 @@ button {
   padding: 17px 30px;
   transition: 300ms;
   @include button-border;
-  &:hover {
+  &:hover,
+  &:focus {
     background: darken($button-and-titles-color, 10%);
   }
 }
 
 
 
-/* --- main styles --- */
+/* --- layout styles --- */
 
 .content {
   letter-spacing: 0.15em;
@@ -102,7 +106,7 @@ button {
 
     header.scrolling {  /* appears when scrolling! */
       background: $header-scroll;
-      top: -30px;
+      top: -25px;
       padding-bottom: 10px;
       transition: 500ms;
     }
@@ -130,11 +134,13 @@ button {
     text-transform: uppercase;
     left: $left-field;
     top: 60px;
-    &:hover > .nav-pill {
+    &:hover > .nav-pill,
+    &:focus > .nav-pill {
       background: url(../img/main-sprite.png) -18px -148px no-repeat;
       border-color: $button-and-titles-color;
     }
-    &:hover > .menu-title {
+    &:hover > .menu-title,
+    &:focus > .menu-title {
       color: $button-and-titles-color;
     }
     .menu-title {
@@ -193,7 +199,8 @@ button {
                 padding: 32px;
                 padding: 2rem;
                 position: relative;
-                &:hover {
+                &:hover,
+                &:focus {
                   color: $button-and-titles-color;
                 }
               } //end a
@@ -307,6 +314,7 @@ button {
       padding-left: $left-field;
       width: 60%; // flex-width(462, 1256) 462px / 1256px = 45.8598726%
       height: 100%;
+      z-index: -1;
     }
 
     .text-column {
@@ -410,7 +418,8 @@ button {
           width: 63px;
           height: 60px;
           transition: 200ms;
-          &:hover {
+          &:hover,
+          &:focus {
             background-color: darken($button-and-titles-color, 10%);
           }
         }
@@ -451,10 +460,9 @@ button {
         display: inline-block;
         text-transform: uppercase;
         text-align: left;
-        padding: 23px 60px 0 21px;
+        padding: 23px 60px 16px 21px;
         margin: 0 10px 20px;
         width: 213px;
-        height: 35px;
         position: relative;
         @include button-border;
       } //end button
@@ -465,12 +473,21 @@ button {
           top: 0;
           height: 100%;
           width: 56px;
+          transition: 300ms;
         }
         .apple-store {
           background: url(../img/main-sprite.png) -116px -20px darken($button-and-titles-color, 5%);
+          &:hover,
+          &:focus {
+            background-color: darken($button-and-titles-color, 10%);
+          }
         }
         .play-store {
           background: url(../img/main-sprite.png) -20px -20px darken($button-and-titles-color, 5%);
+          &:hover,
+          &:focus {
+            background-color: darken($button-and-titles-color, 10%);
+          }
         }
     } //end-buttons block
 } //end download
@@ -493,6 +510,9 @@ footer {
         text-transform: uppercase;
         font-size: .875em;
         margin-bottom: 23px;
+        &:focus {
+          text-decoration: underline;
+        }
         &::after {
           content: "|";
           padding-left: 8px;
@@ -610,10 +630,22 @@ footer {
 }
 
 @media screen and (max-width: 472px) {
+  .home .nav-primary .menu-item {
+    display: block;
+    text-align: left;
+  }
   .home .nav-primary a {
-    padding: 1rem 0.8rem;
+    padding: 16px 37px;
+    padding: 1rem 2.3rem; //0.8rem
+  }
+  .slider-section .text-column .logo-colorized {
+    float: none;
+    margin: auto;
   }
   .subscribe-section form input[type="text"] {
-    width: 200px;
+    width: 150px;
+  }
+  .download .buttons-block .button {
+    width: 150px;
   }
 }

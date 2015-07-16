@@ -1,0 +1,50 @@
+footer {
+  @include clearfix;
+  letter-spacing: 0.13em;
+  .footer-info-wrapper {
+    float: left;
+    margin: 40px 0 0 9%;
+  } //end footer-info
+  .footer-nav {
+    margin-bottom: 20px;
+    padding-left: 8px;
+    a {
+      text-transform: uppercase;
+      font-size: .875em;
+      margin-bottom: 23px;
+      &:focus {
+        text-decoration: underline;
+      }
+      &::after {
+        content: "|";
+        padding-left: 8px;
+      }
+      &:last-child::after {
+        content: "";
+      }
+    }
+  } //end footer-nav
+  p {
+    font-size: .875em;
+    padding-left: 7px;
+  }
+
+  .footer-icon {
+    @include retina {
+      background: url(../img/main-sprite2X.png) -158px -3px no-repeat;
+      background-size: 234px 157px;
+    }
+    background: url(../img/main-sprite.png) -247px -218px no-repeat;
+    float: right;
+    margin: 30px 8.4% 35px 0;
+    width: 74px;
+    height: 70px;
+    @include respond-max(681px) {
+      clear: both;
+      float: none;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.design {
+  position: relative;
+  overflow: hidden;
+  .content {
+    @include clearfix;
+  } //end content
+  .phone-img {
+    background: url(../img/phone.png) 30% bottom no-repeat;
+    background-size: auto;
+    position: absolute;
+    bottom: 0;
+    padding-left: 9%;
+    width: 60%; // flex-width(462, 1256) 462px / 1256px = 45.8598726%
+    height: 100%;
+    z-index: -1;
+    @include respond-max(681px) {
+      display: none;
+    }
+  }
+
+  .text-column {
+    padding: 50px 4% 50px 9%;
+    @include respond-min(682px) {
+      float: right;
+      width: flex-width(448, 1256); // 448px / 1256px = 35.6687898%
+      padding: 126px 4% 100px 0;
+    }
+
+    .bx-wrapper {
+      margin-bottom: 17px;
+      position: relative;
+    }
+    .bx-text-slider h2 {
+      font-size: 1.125em;
+      font-weight: normal;
+      margin-top: 0;
+      margin-bottom: 32px;
+      text-transform: uppercase;
+      color: $headings-color;
+    }
+    .bx-text-slider p {
+      line-height: 1.9 !important;
+      font: .75em $font-light;
+      text-align: left;
+      margin: 0 0 37px 0;
+      padding-left: 5px;
+      color: $paragraph-text-color;
+    }
+    //slider-controls
+    #bx-pager {
+      font-size: .75em;
+      color: $paragraph-text-color;
+      margin-bottom: 2px;
+    }
+    #bx-controls-block {
+      position: relative;
+    }
+    #bx-controls-block a {
+      position: absolute;
+      width: 22px;
+      height: 24px;
+      transition: 200ms;
+    }
+    .bx-prev {
+      @include retina {
+        background: url(../img/main-sprite2X.png) -125px -3px no-repeat;
+        background-size: 234px 157px;
+      }
+      background: url(../img/main-sprite.png) -212px -20px no-repeat;
+      left: -2px;
+    }
+    .bx-prev:hover,
+    .bx-prev:focus {
+      left: -7px;
+    }
+    .bx-next {
+      @include retina {
+        background: url(../img/main-sprite2X.png) -125px -32px no-repeat;
+        background-size: 234px 157px;
+      }
+      background: url(../img/main-sprite.png) -82px -148px no-repeat;
+      left: 26px;
+    }
+    .bx-next:hover,
+    .bx-next:focus {
+      left: 31px;
+    }
+
+    button {
+      color: $primary-text-color;
+      padding: 18px 45px;
+      margin-bottom: 45px;
+    }
+  } //end text-column
+} //end design section

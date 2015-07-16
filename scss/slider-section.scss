@@ -1,0 +1,117 @@
+.slider-section {
+  .content {
+    background: $background-color-secondary;
+    font-weight: normal;
+    @include clearfix;
+  } //end content
+  .text-column {
+    color: $paragraph-text-color;
+    float: left;
+    margin: 104px 0 120px 9%;
+    padding-top: 53px;
+    width: flex-width(189, 1256); // 189px / 1256px = 15%
+    text-align: center;
+    @include respond-max(968px) {
+      float: none;
+      width: flex-width(768, 1256);
+      //width: 60.9076433%; //as .bx-wrapper
+      margin: 50px auto 20px;
+      @include clearfix;
+    }
+    .logo-colorized {
+      @include retina {
+        background: url(../img/main-sprite2X.png) -158px -3px no-repeat;
+        background-size: 234px 157px;
+      }
+      background: url(../img/main-sprite.png) -247px -218px no-repeat;
+      width: 74px;
+      height: 70px;
+      margin: 0 auto 20px;
+      @include respond-max(968px) {
+        float: left;
+        margin: 0;
+      }
+      @include respond-max(472px) {
+        float: none;
+        margin: auto;
+      }
+    }
+    h3 {
+      font-size: 1em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    p {
+      font: .625em $font-medium;
+      letter-spacing: 0.1em;
+      padding: 0 15px;
+    }
+  } //end text-column
+  //slider styles
+  .bx-wrapper {
+    float: left;
+    position: relative;
+    width: flex-width(768, 1256);
+    padding: 0;
+    margin: 104px 0 120px 6.4490446%; /*right - 115px/ 9.156051% */
+    @include respond-min(1400px) {
+      max-width: none !important;
+    }
+    @include respond-max(968px) {
+      margin: 10px auto 30px;
+      float: none;
+      width: 82%;
+    }
+  }
+  .bx-wrapper img {
+    max-width: 100%;
+    display: block;
+  }
+  .bx-viewport {
+    height: auto !important;
+  }
+  .bx-pager {
+    display: none;
+  }
+  //slider-controls
+  .bx-controls-direction {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .bx-controls-direction a {
+    text-indent: -9999px;
+    position: absolute;
+    width: 22px;
+    height: 24px;
+    transition: 200ms;
+  }
+
+  .bx-prev {
+    @include retina {
+      background: url(../img/main-sprite2X.png) -125px -3px no-repeat;
+      background-size: 234px 157px;
+    }
+    background: url(../img/main-sprite.png) -212px -20px no-repeat;
+    top: -15px;
+    right: 20px;
+  }
+  .bx-prev:hover,
+  .bx-prev:focus {
+    right: 25px;
+  }
+
+  .bx-next {
+    @include retina {
+      background: url(../img/main-sprite2X.png) -125px -32px no-repeat;
+      background-size: 234px 157px;
+    }
+    background: url(../img/main-sprite.png) -82px -148px no-repeat;
+    top: -15px;
+    right: -5px;
+  }
+  .bx-next:hover,
+  .bx-next:focus {
+    right: -10px;
+  }
+} //end slider section

@@ -1,0 +1,74 @@
+.download {
+  .content {
+    background: $background-color-secondary;
+    letter-spacing: 0.2em;
+    text-align: center;
+  } //end content
+  h3 {
+    font-size: 1.25em;
+    font-weight: normal;
+    margin: 0;
+    padding: 90px 0 5px 0;
+    text-transform: uppercase;
+    @include respond-max(681px) {
+      padding-top: 50px;
+    }
+  }
+  p {
+    font: .75em $font-medium;
+    text-transform: uppercase;
+    line-height: 1.8;
+    letter-spacing: 0.17em;
+    width: flex-width(848, 1256); // 848px / 1256px = 67%
+    margin: 0 auto 43px;
+  }
+  .buttons-block {
+    padding-bottom: 96px;
+    .button {
+      background: $buttons-color;
+      color: $primary-text-color;
+      display: inline-block;
+      text-transform: uppercase;
+      text-align: left;
+      padding: 23px 80px 16px 21px;
+      margin: 0 10px 20px;
+      width: 193px;
+      position: relative;
+      @include button-border;
+      @include respond-max(472px) {
+        width: 150px;
+      }
+    } //end button
+    .icon {
+      border-radius: 0 2px 2px 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 56px;
+      transition: 300ms;
+    }
+    .apple-store {
+      @include retina {
+        background: url(../img/main-sprite2X.png) -64px -3px no-repeat $download-section-buttons;
+        background-size: 234px 157px;
+      }
+      background: url(../img/main-sprite.png) -116px -20px $download-section-buttons;
+      &:hover,
+      &:focus {
+        background-color: $buttons-hover;
+      }
+    }
+    .play-store {
+      @include retina {
+        background: url(../img/main-sprite2X.png) -3px -3px no-repeat $download-section-buttons;
+        background-size: 234px 157px;
+      }
+      background: url(../img/main-sprite.png) -20px -20px $download-section-buttons;
+      &:hover,
+      &:focus {
+        background-color: $buttons-hover;
+      }
+    }
+  } //end-buttons block
+} //end download

@@ -1,0 +1,189 @@
+.home {
+  background-size: cover !important;
+  .content {
+    color: $primary-text-color;
+    text-align: center;
+  } //end content
+
+  .navbar-header {
+    @include clearfix;
+    margin: 0 auto;
+    padding: 35px 9% 0;
+    position: relative;
+  }
+
+  .navbar-header.scrolling {  /* appears when scrolling! */
+    background: $header-scroll;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: 500ms;
+  }
+  header {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+  } //end header
+  .logo {
+    @include retina {
+      background: url(../img/main-sprite2X.png) -69px -92px no-repeat;
+      background-size: 234px 157px;
+    }
+    width: 60px;
+    height: 63px;
+    background: url(../img/main-sprite.png) -20px -218px no-repeat;
+    float: left;
+    @include respond-min(968px) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  } //end logo
+
+  //nav-toggle styles
+  .nav-toggle {
+    background: $buttons-color;
+    float: right;
+    margin-top: 15px;
+    padding: 9px 10px;
+    &:hover {
+      background: $buttons-hover;
+    }
+    .icon-bar {
+      background: $nav-toggle-icons;
+      display: block;
+      height: 2px;
+      width: 22px;
+      border-radius: 1px;
+      & + .icon-bar {
+        margin-top: 4px;
+      }
+    }
+  }
+
+  //nav-menu
+  .nav-primary {
+    @include clearfix;
+    @include respond-max(599px) {
+      clear: both;
+    }
+  }
+
+  .nav-menu {
+    list-style: none;
+    float: right;
+    text-align: right;
+    @include respond-min(968px) {
+      display: table;
+      float: none;
+      margin: 0 auto;
+      padding-left: 30px;
+    }
+    .menu-item {
+      @include respond-min(600px) {
+        float: left;
+      }
+      @include respond-min(968px) {
+        &:nth-child(2) {
+          padding-right: 28px;
+          padding-right: 1.8rem;
+        }
+        &.split-right {
+          margin-left: 60px; // logo width
+          padding-left: 28px;
+          padding-left: 1.8rem;
+        }
+      }
+      @include respond-min(1068px) {
+        &:nth-child(2) {
+          padding-right: 64px;
+          padding-right: 4rem;
+        }
+        &.split-right {
+          margin-left: 60px; // logo width
+          padding-left: 64px;
+          padding-left: 4rem;
+        }
+      }
+    }
+    a {
+      text-transform: uppercase;
+      transition: 300ms;
+      border: none;
+      display: block;
+      padding: 8px;
+      padding: 0.5rem;
+      @include respond-min(968px) {
+        padding: 32px;
+        padding: 2rem;
+      }
+      &:hover,
+      &:focus {
+        color: $headings-color;
+      }
+    }
+  } //end nav-menu
+
+  h1 {
+    margin: 0 auto 8px;
+    padding-top: flex-width(335px, 1256px);
+    font-size: 2.25em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    @include respond-max(585px) {
+      font-size: 1.5em;
+      padding-top: 150px;
+    }
+  }
+  .tagline {
+    margin: 0 0 25px;
+    font-family: $font-medium;
+    font-weight: normal;
+    letter-spacing: 0.17em;
+  }
+  .get-started-button {
+    margin-bottom: 220px;
+    @include respond-max(585px) {
+      margin-bottom: 120px;
+    }
+  }
+  .icons-block {
+    margin: 0 auto;
+    padding-bottom: 20px;
+    .icons {
+      width: 28px;
+      margin: 0 1px;
+      height: 26px;
+      display: inline-block;
+      transition: 500ms;
+      &:hover,
+      &:focus {
+        transform: rotate(360deg);
+        opacity: 0.8;
+      }
+    }
+    .icon-twitter {
+      @include retina {
+        background: url(../img/main-sprite2X.png) -125px -61px no-repeat;
+        background-size: 234px 157px;
+      }
+      background: url(../img/main-sprite.png) -247px -152px no-repeat;
+      margin-left: 6px;
+    }
+    .icon-flickr {
+      @include retina {
+        background: url(../img/main-sprite2X.png) -3px -92px no-repeat;
+        background-size: 234px 157px;
+      }
+      background: url(../img/main-sprite.png) -274px -86px no-repeat;
+    }
+    .icon-dribbble {
+      @include retina {
+        background: url(../img/main-sprite2X.png) -36px -92px no-repeat;
+        background-size: 234px 157px;
+      }
+      background: url(../img/main-sprite.png) -274px -20px no-repeat;
+    }
+  } //end icons-block
+} //end home section

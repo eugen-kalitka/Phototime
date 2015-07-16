@@ -1,0 +1,3 @@
+@function flex-width($target, $context) {
+  @return (($target/$context)*100%);
+}

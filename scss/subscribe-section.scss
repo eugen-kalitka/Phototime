@@ -1,0 +1,64 @@
+.subscribe-section {
+  .content {
+    background-size: cover !important;
+    letter-spacing: 0.22em;
+    text-align: center;
+  } //end content
+  .email-form {
+    padding-top: 347px;
+    padding-bottom: 325px;
+    @include respond-max(660px) {
+      padding-top: 125px;
+      padding-bottom: 125px;
+    }
+    label {
+      color: $primary-text-color;
+      display: block;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      padding-bottom: 26px;
+    }
+    input[type="text"] {
+      font-family: $font-medium;
+      text-transform: uppercase;
+      margin-right: -63px;
+      padding: 0 56px 0 22px;
+      width: 255px;
+      height: 60px;
+      @include button-border;
+      @include respond-max(472px) {
+        width: 150px;
+      }
+    }
+    input::-webkit-input-placeholder {
+      color: $paragraph-text-color;
+      letter-spacing: 0.15em;
+    }
+    input:-moz-placeholder {
+      color: $paragraph-text-color;
+      letter-spacing: 0.15em;
+    }
+    input:-ms-input-placeholder {
+      color: $paragraph-text-color;
+      letter-spacing: 0.15em;
+    }
+
+    input[type="submit"] {
+      @include retina {
+        background: url(../img/main-sprite2X.png) -158px -78px no-repeat $buttons-color;
+        background-size: 234px 157px;
+      }
+      background: url(../img/main-sprite.png) -144px -148px no-repeat $buttons-color;
+      border: none;
+      border-radius: 0 2px 2px 0;
+      padding: 0 !important;
+      width: 63px;
+      height: 60px;
+      transition: 200ms;
+      &:hover,
+      &:focus {
+        background-color: $buttons-hover;
+      }
+    }
+  } //end form
+} //end subscribe section

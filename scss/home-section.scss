@@ -47,7 +47,8 @@
     float: right;
     margin-top: 15px;
     padding: 9px 10px;
-    &:hover {
+    &:hover,
+    &:focus {
       background: $buttons-hover;
     }
     .icon-bar {

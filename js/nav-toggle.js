@@ -13,5 +13,6 @@ $(window).resize(windowSize);
 $('#nav-toggle').on('keypress click', function(e){
     if (e.which === 13 || e.type === 'click') {
         $('#nav-menu').slideToggle("slow");
+        return false;
     }
 });

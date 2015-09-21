@@ -1,10 +1,8 @@
 *.[oa]
 *~
 *.psd
-<<<<<<< HEAD
 *.jpg
-=======
 /*.jpg
->>>>>>> some changes made
 .idea/
 trash/
+gh-pages/
